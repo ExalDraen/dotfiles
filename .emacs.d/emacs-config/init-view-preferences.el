@@ -6,7 +6,7 @@
 ;; (setq truncate-partial-width-windows nil) ;; don't wrap lines for horizontally split windows
 (setq column-number-mode t) ;; display cursor position at the bottom of a window
 (setq-default frame-title-format "%b (%f)") ;; display file path in the frame title
-(set-face-attribute 'default nil :height 110)  ;; font size
+(set-face-attribute 'default nil :height 100)  ;; font size
 ;; (setq resize-mini-windows nil) ;; don't automatically resize the mini window
 (split-window-right) ;; when spliting windows, do it side by side https://www.gnu.org/software/emacs/manual/html_node/emacs/Split-Window.html
 (global-hl-line-mode) ;; highlight line
