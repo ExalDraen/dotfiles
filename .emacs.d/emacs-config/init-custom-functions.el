@@ -1,17 +1,11 @@
-;; (defun delete-current-line ()
-;;   "Delete (not kill) the current line."
-;;   (interactive)
-;;   (save-excursion
-;;     (delete-region
-;;      (progn (forward-visible-line 0) (point))
-;;      (progn (forward-visible-line 1) (point)))))
-;; (global-set-key (kbd "<C-S-backspace>") 'delete-current-line)
-
+;; shell is very, very limited
+;; terminal doesn't work well with bash tools, e.g. venvs, custom prompts
+;; eshell is emacs shell
 (defun terminal-here ()
   "open terminal in the current buffer's location"
   (interactive)
   (shell-command "gnome-terminal"))
-(global-set-key [f7] 'terminal-here)
+(global-set-key [f8] 'terminal-here)
 
 (defun terminal-inside ()
   "
@@ -20,7 +14,7 @@
   ansi-term
   "
   (interactive)
-  (let ((buf (ansi-term "/usr/bin/env bash")))
+  (let ((buf (ansi-term "bash")))
     (switch-to-buffer (other-buffer buf))
     (switch-to-buffer-other-window buf)))
 (global-set-key [f6] 'terminal-inside)
@@ -66,15 +60,15 @@
 ;; BUFFER BEHAVIOUR :: handy function from wikipedia, that
 ;; makes new windows automatically load the next buffer
 ;; rather than the same one as is already open.
-;; (defun split-vertical-to-next-buffer ()
-;;   (interactive)
-;;   (split-window-vertically)
-;;   ((setq )et-window-buffer (next-window) (other-buffer)))
-;; (defun split-horizontal-to-next-buffer ()
-;;   (interactive)
-;;   (split-window-horizontally)
-;;   (set-window-buffer (next-window) (other-buffer)))
-;; (global-set-key "\C-x2" 'split-vertical-to-next-buffer)
-;; (global-set-key "\C-x3" 'split-horizontal-to-next-buffer)
+(defun split-vertical-to-next-buffer ()
+  (interactive)
+  (split-window-vertically)
+  ((setq )et-window-buffer (next-window) (other-buffer)))
+(defun split-horizontal-to-next-buffer ()
+  (interactive)
+  (split-window-horizontally)
+  (set-window-buffer (next-window) (other-buffer)))
+(global-set-key "\C-x2" 'split-vertical-to-next-buffer)
+(global-set-key "\C-x3" 'split-horizontal-to-next-buffer)
 
 (provide 'init-custom-functions)
