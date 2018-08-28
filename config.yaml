@@ -1,0 +1,34 @@
+config:
+  backup: true
+  create: true
+  dotpath: . 
+dotfiles:
+  f_nix:
+    dst: ~/nix
+    src: nix
+  f_bashrc:
+    dst: ~/.bashrc_user
+    src: .bashrc_user
+  f_tcap:
+    dst: ~/.LESS_TERMCAP
+    src: .LESS_TERMCAP
+  f_emacs:
+    dst: ~/.emacs.d
+    src: .emacs.d
+    link: true
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: .gitconfig
+  f_gitmsg:
+    dst: ~/.gitmessage.txt
+    src: .gitmessage.txt
+profiles:
+  ghp:
+    dotfiles:
+     - f_nix
+     - f_bashrc
+     - f_tcap
+     - f_emacs
+     - f_gitconfig
+     - f_gitmsg
+#    - ALL

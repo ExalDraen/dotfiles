@@ -1,9 +1,9 @@
 [user]
- name = Michal Wasilewski
- email = mwasilewski@gmx.com
- signingkey = 1F12B08D
+ name = Alexander Hermes
+ email = alexander.hermes@grasshopperasia.com
+ signingkey = 739FFE6DEAD85E11
 [commit]
- template = /home/michal/.gitmessage.txt
+ template = /home/alexander.hermes/.gitmessage.txt
  gpgsign = true
 [format]
  signOff = true

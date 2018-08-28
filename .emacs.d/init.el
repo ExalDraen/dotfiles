@@ -60,3 +60,19 @@
 (require 'init-yaml)
 
 (provide 'init)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(haskell-tags-on-save t)
+ '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
+ '(package-selected-packages
+   (quote
+    (yaml-mode toml-mode company-terraform terraform-mode ensime racer rpm-spec-mode virtualenvwrapper elpy puppet-mode smarty-mode php-mode nix-buffer nix-sandbox nix-mode markdown-toc markdown-mode json-mode jinja2-mode htmlize intero haskell-mode groovy-mode go-eldoc go-complete go-stacktracer go-autocomplete go-mode gnuplot erlang dockerfile-mode cljsbuild-mode elein clojure-mode ansible-vault ansible-doc ansible fill-column-indicator powerline monokai-theme yasnippet-snippets yasnippet smart-shift helm-projectile projectile org-trello neotree multiple-cursors hydra helm-swoop helm avy smartparens magit evil auto-complete diminish use-package))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

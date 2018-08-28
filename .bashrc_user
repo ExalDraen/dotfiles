@@ -38,4 +38,4 @@ function stopwatch(){
 }
 
 alias docker_cleanc='docker system prune -a'
-alias sa="ssh-add ~/.ssh/id_rsa"
+alias ssa="ssh-add ~/.ssh/id_rsa"
