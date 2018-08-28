@@ -15,7 +15,6 @@ dotfiles:
   f_emacs:
     dst: ~/.emacs.d
     src: .emacs.d
-    link: true
   f_gitconfig:
     dst: ~/.gitconfig
     src: .gitconfig
