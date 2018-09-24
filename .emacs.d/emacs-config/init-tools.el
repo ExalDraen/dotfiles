@@ -23,6 +23,8 @@
     ;; Finding files can also be a pain, so use helm
     ;; to locate and open files
     ("C-x C-f" . helm-find-files)
+    ;; Use helm for the kill ring
+    ("M-y" . helm-show-kill-ring)
   )
   :config
   (setq helm-boring-buffer-regexp-list (list
@@ -48,14 +50,15 @@
                                         ;; (rx "*Shell Command Output*")
                                         )
         )
+  (setq helm-M-x-fuzzy-match t) ;; optional fuzzy matching for helm-M-x
   )
 
 (use-package helm-swoop
   :ensure t
   :after helm)
 
-(use-package hydra
-  :ensure t)
+;;(use-package hydra
+;;  :ensure t)
 
 (use-package multiple-cursors
   :ensure t)
@@ -80,12 +83,6 @@
   (setq neo-force-change-root t)
   (global-set-key [f7] 'neotree-toggle))
 (add-hook 'after-init-hook #'neotree-toggle)
-(defun workspace ()
-  (interactive)
-  (neotree-dir "/media/veracrypt1/1_home/weekly.0/localhost/1_home/workspace"))
-(defun workworkspace ()
-  (interactive)
-  (neotree-dir "/home/michal/workspace"))
 
 ;; full: http://orgmode.org/org.html
 ;; compact: http://orgmode.org/guide/
@@ -93,13 +90,6 @@
 (use-package org
   :ensure t)
 
-;; http://org-trello.github.io/
-(use-package org-trello
-  :ensure t
-  :config
-  (setq org-trello-files '("/home/michal/trello")))
-
-;; http://projectile.readthedocs.io/en/latest/usage/
 (use-package projectile
   :ensure t
   :diminish projectile-mode
@@ -108,6 +98,7 @@
   (use-package helm-projectile
     :ensure t)
   (helm-projectile-on))
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map);; http://projectile.readthedocs.io/en/latest/usage/
 ;; helm-projectile-switch-project
 ;; workaround for laggy projectile, more info: https://github.com/bbatsov/projectile/issues/1183
 (setq projectile-mode-line
@@ -120,22 +111,6 @@
   :config
   (global-smart-shift-mode 1)
   )
-
-;; (use-package tabbar-ruler
-;;   :ensure t)
-
-;; (use-package tabbar
-;;   :ensure t)
-;; (defun my-tabbar-buffer-groups () ;; customize to show all normal files in one group
-;;   "Returns the name of the tab group names the current buffer belongs to.
-;;   There are two groups: Emacs buffers (those whose name starts with '*', plus
-;;   dired buffers), and the rest.  This works at least with Emacs v24.2 using
-;;   tabbar.el v1.7."
-;;   (list (cond ((string-equal "*" (substring (buffer-name) 0 1)) "emacs")
-;;        ((eq major-mode 'dired-mode) "emacs")
-;;        (t "user"))))
-;; (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
-;; (tabbar-mode 1)
 
 (use-package yasnippet
   :ensure t

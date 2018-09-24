@@ -27,3 +27,8 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (provide 'init-magit)
+
+;; Ensure that magit uses gpg-agent for SSH, not ssh-agent
+;; Note that we need to use printf to avoid trailing newline ("\n") characters
+;; which will cause issues otherwise
+(setenv "SSH_AUTH_SOCK" (shell-command-to-string "printf %s \"$(gpgconf --list-dirs agent-ssh-socket)\""))
