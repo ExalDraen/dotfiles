@@ -69,7 +69,7 @@
  '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
  '(package-selected-packages
    (quote
-    (yaml-mode toml-mode company-terraform terraform-mode ensime racer rpm-spec-mode virtualenvwrapper elpy puppet-mode smarty-mode php-mode nix-buffer nix-sandbox nix-mode markdown-toc markdown-mode json-mode jinja2-mode htmlize intero haskell-mode groovy-mode go-eldoc go-complete go-stacktracer go-autocomplete go-mode gnuplot erlang dockerfile-mode cljsbuild-mode elein clojure-mode ansible-vault ansible-doc ansible fill-column-indicator powerline monokai-theme yasnippet-snippets yasnippet smart-shift helm-projectile projectile org-trello neotree multiple-cursors hydra helm-swoop helm avy smartparens magit evil auto-complete diminish use-package))))
+    (a yaml-mode toml-mode company-terraform racer rpm-spec-mode virtualenvwrapper elpy puppet-mode nix-buffer nix-sandbox nix-mode markdown-toc markdown-mode json-mode jinja2-mode htmlize groovy-mode go-eldoc go-complete go-stacktracer go-autocomplete go-mode gnuplot dockerfile-mode fill-column-indicator powerline monokai-theme yasnippet-snippets yasnippet smart-shift helm-projectile projectile org-trello multiple-cursors hydra helm-swoop helm smartparens magit evil auto-complete diminish use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

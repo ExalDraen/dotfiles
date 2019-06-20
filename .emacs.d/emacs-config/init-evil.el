@@ -13,4 +13,9 @@
   (define-key evil-normal-state-map (kbd "M-.") nil) ;; unset evil keybinding for M-.
   )
 
+;; Integration between evil and magit
+(use-package evil-magit
+  :ensure t
+  )
+
 (provide 'init-evil)
