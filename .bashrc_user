@@ -16,7 +16,7 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
 fi
 
 # prompt setup
-export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
+export PS1='\[\033[01;32m\]\u \[\033[00;31m\]\W \$ \[\033[00m\]'
 
 #Extra colours for LESS
 . ~/.LESS_TERMCAP
@@ -50,3 +50,6 @@ alias ssa="ssh-add ~/.ssh/id_rsa"
 
 # Start gpg agent
 gpgconf --launch gpg-agent
+
+# Apparix / apparish functions for bookmarking
+. ~/.bourne-apparish

@@ -1,0 +1,18 @@
+ssh -v csqdev-ciagent01
+ssh -v csqdev-ciagent01
+env | grep SSH
+ssh-add -l
+ssh-add -v
+ls /run/user/88059/gnupg/
+strace ssh-add -l
+strace -e=open,read,stat,fstat -y -s 60 ssh-add -l
+strace -e trace=open,read,stat,fstat -y -s 60 ssh-add -l
+strace -y -s 60 ssh-add -l
+env | grep SSH
+echo $SSH_AUTH_SOCK
+strace -e trace=connect -y -s 60 ssh-add -l
+export SSH_AUTH_SOCK=/run/user/88059/gnupg/S.gpg-agent.ssh
+strace -e trace=connect -y -s 60 ssh-add -l
+exit
+strace -y -s 60 -e trace=connect ssh-add -l
+exit

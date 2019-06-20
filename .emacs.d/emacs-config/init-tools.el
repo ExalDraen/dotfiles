@@ -82,7 +82,7 @@
   ;; (setq neo-autorefresh t) ;; setting to t will cause neotree to change root after opening a file
   (setq neo-force-change-root t)
   (global-set-key [f7] 'neotree-toggle))
-(add-hook 'after-init-hook #'neotree-toggle)
+;;(add-hook 'after-init-hook #'neotree-toggle)
 
 ;; full: http://orgmode.org/org.html
 ;; compact: http://orgmode.org/guide/

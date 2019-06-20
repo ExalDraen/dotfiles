@@ -2,6 +2,6 @@
   :ensure t
   )
 
-;; (setq-default groovy-indent-offset 4)
+(setq-default groovy-indent-offset 2)
 
 (provide 'init-groovy)

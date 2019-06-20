@@ -758,7 +758,8 @@
 (require 'diff)
 
 
-
+
+
 ;;; =====================================================================
 ;;;              Compatibility hacks for older Emacsen
 
@@ -860,7 +861,8 @@
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;              Global variables and customization options
 
@@ -1093,7 +1095,8 @@ in visualizer."
 
 
 
-
+
+
 ;;; =================================================================
 ;;;                          Default keymaps
 
@@ -1265,7 +1268,8 @@ in visualizer."
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                     Undo-tree data structure
 
@@ -1497,7 +1501,8 @@ in visualizer."
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;              Basic undo-tree data structure functions
 
@@ -1626,7 +1631,8 @@ Comparison is done with `eq'."
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;             Undo list and undo changeset utility functions
 
@@ -1837,7 +1843,8 @@ Comparison is done with `eq'."
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                History discarding utility functions
 
@@ -2007,7 +2014,8 @@ which is defined in the `warnings' library.\n")
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                   Visualizer utility functions
 
@@ -2130,7 +2138,8 @@ which is defined in the `warnings' library.\n")
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                  Undo-in-region utility functions
 
@@ -2626,7 +2635,8 @@ of either NODE itself or some node above it in the tree."
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                        Undo-tree commands
 
@@ -3051,7 +3061,8 @@ Argument is a character, naming the register."
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                    Persistent storage commands
 
@@ -3200,7 +3211,8 @@ signaling an error if file is not found."
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                    Visualizer drawing functions
 
@@ -3845,7 +3857,8 @@ signaling an error if file is not found."
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                        Visualizer commands
 
@@ -4197,7 +4210,8 @@ specifies `saved', and a negative prefix argument specifies
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                    Visualizer selection mode
 
@@ -4344,7 +4358,8 @@ specifies `saved', and a negative prefix argument specifies
 
 
 
-
+
+
 ;;; =====================================================================
 ;;;                      Visualizer diff display
 

@@ -1,7 +1,7 @@
 config:
   backup: true
   create: true
-  dotpath: . 
+  dotpath: .
 dotfiles:
   f_nix:
     dst: ~/nix
@@ -9,10 +9,21 @@ dotfiles:
   f_bashrc:
     dst: ~/.bashrc_user
     src: .bashrc_user
+  f_apparish:
+    dst: ~/.bourne-apparish
+    src: .bourne-apparish
   f_tcap:
     dst: ~/.LESS_TERMCAP
     src: .LESS_TERMCAP
   f_emacs:
+    cmpignore:
+      - "auto-save-list"
+      - "*session.*"
+      - "elpa"
+    upignore:
+      - "auto-save-list"
+      - "*session.*"
+      - "elpa"
     dst: ~/.emacs.d
     src: .emacs.d
   f_gitconfig:
@@ -24,10 +35,10 @@ dotfiles:
 profiles:
   ghp:
     dotfiles:
+     - f_apparish
      - f_nix
      - f_bashrc
      - f_tcap
      - f_emacs
      - f_gitconfig
      - f_gitmsg
-#    - ALL
