@@ -4,4 +4,22 @@
 (setq-default show-trailing-whitespace t) ;; highlight trailing whitespaces
 (add-hook 'before-save-hook 'delete-trailing-whitespace) ;; delete trailing whitespaces on save
 
+(use-package highlight-indentation
+  :ensure t
+  :diminish
+  )
+
+;; Taken from https://stackoverflow.com/a/4459159/11741678
+(defun aj-toggle-fold ()
+  "Toggle fold all lines larger than indentation on current line"
+  (interactive)
+  (let ((col 1))
+    (save-excursion
+      (back-to-indentation)
+      (setq col (+ 1 (current-column)))
+      (set-selective-display
+       (if selective-display nil (or col 1))))))
+(global-set-key [(M C i)] 'aj-toggle-fold)
+
+
 (provide 'init-whitespaces)

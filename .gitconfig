@@ -1,7 +1,7 @@
 [user]
  name = Alexander Hermes
  email = alexander.hermes@grasshopperasia.com
- signingkey = 0x0CBD0176E1A4B0C2
+ signingkey = 0xCC1F49A36FF40BE8
 [commit]
  template = /home/alexander.hermes/.gitmessage.txt
  gpgsign = true
