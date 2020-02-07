@@ -36,6 +36,7 @@
 ;;(require 'init-clojure)
 (require 'init-docker)
 ;;(require 'init-erlang)
+(require 'init-eruby)
 ;;(require 'init-gnuplot)
 (require 'init-golang)
 (require 'init-groovy)
@@ -66,13 +67,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(haskell-tags-on-save t)
+ '(helm-ff-lynx-style-map t)
  '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
  '(package-selected-packages
    (quote
-    (a yaml-mode toml-mode company-terraform racer rpm-spec-mode virtualenvwrapper elpy puppet-mode nix-buffer nix-sandbox nix-mode markdown-toc markdown-mode json-mode jinja2-mode htmlize groovy-mode go-eldoc go-complete go-stacktracer go-autocomplete go-mode gnuplot dockerfile-mode fill-column-indicator powerline monokai-theme yasnippet-snippets yasnippet smart-shift helm-projectile projectile org-trello multiple-cursors hydra helm-swoop helm smartparens magit evil auto-complete diminish use-package))))
+    (a yaml-mode toml-mode company-terraform rpm-spec-mode virtualenvwrapper elpy puppet-mode nix-buffer nix-sandbox markdown-toc json-mode jinja2-mode htmlize go-eldoc go-complete go-stacktracer go-autocomplete gnuplot dockerfile-mode fill-column-indicator powerline monokai-theme smart-shift org-trello helm-swoop evil auto-complete diminish))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(eruby-standard-face ((t (:background "dark slate gray")))))
